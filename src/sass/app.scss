@@ -9,6 +9,9 @@
 @import "layouts/wrapper";
 @import "layouts/content";
 
+//Added by Aakash Hemadri for thebridge
+@import "components/banner/banner-card";
+
 @import "components/ui/button";
 @import "components/ui/icon-button";
 @import "components/ui/input";
@@ -44,6 +47,7 @@
 @import "components/search/icon";
 @import "components/search/result";
 @import "components/footer";
+
 
 @import "libs/aos/aos";
 @import "libs/glide/glide.core";

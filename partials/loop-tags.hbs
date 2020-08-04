@@ -1,0 +1,30 @@
+{{!-- The template below includes the markup for each post --}}
+
+{{#foreach tags}}
+{{#is "tag"}}
+<div class="m-recommended-slider m-recommended-slider__item glide__slide">
+    {{/is}}
+    <div class="m-banner-card {{#unless feature_image}}no-picture{{/unless}} {{post_class}}">
+        <div class="m-banner-card__picture">
+            <a href="{{url}}" class="m-banner-card__picture-link" aria-hidden="true" tabindex="-1">
+                {{#if feature_image}}
+                <img class="m-banner-card__picture-background" src="{{img_url feature_image size="m"}}" loading="lazy"
+                    alt="">
+                <b class="m-banner-card__name__picture">{{name}}</b>
+                {{else}}
+                <b class="m-banner-card__name">{{name}}</b>
+                {{/if}}
+            </a>
+        </div>
+    </div>
+    {{#is "tag"}}
+</div>
+{{/is}}
+{{else}}
+<header class="m-heading no-margin">
+    <h3>{{t "No posts found"}}</h3>
+    <p>
+        {{t "Apparently there are no posts at the moment, check again later."}}
+    </p>
+</header>
+{{/foreach}}

@@ -1,16 +1,30 @@
 routes:
-  /signup/:
-    template: members/signup
-    data: page.signup
-  /signin/:
-    template: members/signin
-    data: page.signin
-  /membership/:
-    template: members/membership
-    data: page.membership
-  /account/:
-    template: members/account
-    data: page.account
+  # /signup/:
+  #   template: members/signup
+  #   data: page.signup
+  # /signin/:
+  #   template: members/signin
+  #   data: page.signin
+  # /membership/:
+  #   template: members/membership
+  #   data: page.membership
+  # /account/:
+  #   template: members/account
+  #   data: page.account
+  /everything-psg/:
+    template: page-category
+    data: page.everything-psg
+  /series/:
+    template: page-category
+    data: page.series
+  /mixed/:
+    template: page-category
+    data: page.mixed
+  /team/:
+    template: page-team
+    data: page.team
+  /error-301/:
+    template: error-301
 
 collections:
   /:
@@ -18,5 +32,6 @@ collections:
     template: index
 
 taxonomies:
-  tag: /tag/{slug}/
+  tag: /category/{slug}/
   author: /author/{slug}/
+
