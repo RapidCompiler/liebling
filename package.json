@@ -25,6 +25,12 @@
       "xl": {
         "width": 2000
       }
+    },
+    "social": {
+      "facebook": "https://www.facebook.com/thebridgepsg",
+      "instagram": "https://www.instagram.com/thebridgepsg",
+      "linkedin": "https://www.linkedin.com/company/the-bridge-psg-tech",
+      "twitter": "https://www.twitter.com/thebridgepsg"
     }
   },
   "demo": "https://liebling.eduardogomez.io",

@@ -25,6 +25,10 @@ routes:
     data: page.team
   /error-301/:
     template: error-301
+  /custom/api/:
+    permalink: /custom/api/
+    template: api
+    content_type: json
 
 collections:
   /:

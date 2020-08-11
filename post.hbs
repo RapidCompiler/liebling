@@ -41,13 +41,16 @@ into the {body} of the default.hbs template --}}
             <h1 class="m-heading__title in-post">{{title}}</h1>
             <div class="m-heading__meta">
               <a href="{{primary_author.url}}" class="m-heading__meta__tag">{{primary_author.name}}</a>
-              <span class="m-heading__meta__divider" aria-hidden="true">&bull;</span>
+            </div>
+            <hr>
+            <div class="m-heading__meta">
+              {{!-- <a href="{{primary_author.url}}" class="m-heading__meta__tag">{{primary_author.name}}</a> --}}
+              {{!-- <span class="m-heading__meta__divider" aria-hidden="true">&bull;</span> --}}
               {{#if primary_tag}}
               <a href="{{primary_tag.url}}" class="m-heading__meta__tag">{{primary_tag.name}}</a>
               <span class="m-heading__meta__divider" aria-hidden="true">&bull;</span>
               {{/if}}
               <span class="m-heading__meta__time">{{date published_at}}</span>
-
             </div>
           </header>
           <div class="pos-relative js-post-content">
@@ -70,7 +73,7 @@ into the {body} of the default.hbs template --}}
               </div>
             </div>
             {{content}}
-            {{!-- List of tags  --}}
+            {{!-- List of tags
             {{#if tags}}
             <section class="m-tags in-post">
               <h3 class="m-submenu-title">{{t "Tags"}}</h3>
@@ -82,7 +85,7 @@ into the {body} of the default.hbs template --}}
                 {{/foreach}}
               </ul>
             </section>
-            {{/if}}
+            {{/if}} --}}
           </div>
         </div>
       </div>

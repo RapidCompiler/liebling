@@ -60,9 +60,20 @@ into the {body} of the default.hbs template --}}
             <div class="m-featured-slider__list__item">
               <article class="m-featured-article {{#unless feature_image}}no-picture{{/unless}}">
                 <div class="m-featured-article__picture">
-                  {{#if feature_image}}
-                  <div class="lozad no-fade-animation" data-background-image="{{img_url feature_image size="l"}}"></div>
-                  {{/if}}
+                   {{#if feature_image}}
+                            <style>
+                              #featured-bg-{{id}} {
+                                background-image: url({{img_url feature_image size='l'}});
+                              }
+                            
+                              @media(max-width: 768px) {
+                                #featured-bg-{{id}} {
+                                  background-image: url({{img_url feature_image size='m'}});
+                                }
+                              }
+                            </style>
+                            <div id="featured-bg-{{id}}"></div>
+                          {{/if}}
                 </div>
                 <div class="m-featured-article__meta">
                   <a href="{{primary_author.url}}" class="m-featured-article__author js-tooltip" aria-label="Authors"
@@ -108,3 +119,8 @@ into the {body} of the default.hbs template --}}
     {{pagination}}
   </div>
 </main>
+
+{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
+{{#contentFor "scripts"}}
+<script defer src="{{asset "js/home.js"}}"></script>
+{{/contentFor}}
