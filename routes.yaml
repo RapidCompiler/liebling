@@ -17,12 +17,17 @@ routes:
   /series/:
     template: page-category
     data: page.series
-  /mixed/:
+  /interviews/:
     template: page-category
-    data: page.mixed
+    data: page.interviews
+  /careers/:
+    template: page-category
+    data: page.careers
   /team/:
     template: page-team
     data: page.team
+  /offline/:
+    template: offline
   /error-301/:
     template: error-301
   /custom/api/:

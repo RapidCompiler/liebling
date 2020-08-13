@@ -20,7 +20,7 @@
     @include transform(scale(1));
   }
 
-  @include respond-to('medium') {
+  @include respond-to("medium") {
     visibility: visible !important;
     position: relative;
     top: auto;
@@ -37,7 +37,7 @@
   padding: 50px 0 5px;
   min-height: 100%;
 
-  @include respond-to('medium') {
+  @include respond-to("medium") {
     padding: 0;
     min-height: 0;
   }
@@ -47,7 +47,7 @@
   .m-menu__main {
     padding-top: 75px;
 
-    @include respond-to('medium') {
+    @include respond-to("medium") {
       padding: 0;
     }
   }

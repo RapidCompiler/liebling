@@ -1,15 +1,14 @@
 .m-logo {
   display: inline-block;
-  height: 50px;
+  height: 40px;
 
   img {
     width: auto;
     border-radius: 0.25rem;
-    max-width: 300px;
+    max-width: 150px;
     height: 100%;
     padding: 10px;
     background-color: var(--logo-background);
-    object-fit: contain;
   }
 
   &.in-mobile-topbar {
