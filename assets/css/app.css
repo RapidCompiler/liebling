@@ -1013,7 +1013,7 @@ fieldset {
   flex-direction: column;
   position: relative;
   margin-bottom: 20px;
-  height: 400px;
+  height: 100px;
   background-color: var(--background-color);
   border-radius: 10px;
   border: 1px solid var(--secondary-border-color);
@@ -1032,7 +1032,7 @@ fieldset {
 @media only screen and (min-width: 48rem) {
   .m-banner-card {
     width: calc((100% / 2) - 20px);
-    height: 400px;
+    height: 100px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 20px;
@@ -1047,7 +1047,7 @@ fieldset {
   }
 }
 .m-banner-card.no-picture .m-banner-card__picture {
-  height: 400px !important;
+  height: 100px !important;
 }
 .m-banner-card.no-picture .m-banner-card__info {
   background-color: var(--secondary-subtle-color);
@@ -1060,11 +1060,6 @@ fieldset {
   z-index: 2;
 }
 .m-banner-card.as-author .m-banner-card__picture {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px 10px 10px 10px;
   background-color: rgba(0, 0, 0, 0.25);
 }
 .m-banner-card.as-author .m-banner-card__picture-background {
@@ -1090,14 +1085,14 @@ fieldset {
 
 .m-banner-card__picture {
   position: relative;
-  height: 400px;
+  height: 120px;
   border-radius: 10px 10px 10px 10px;
   background-color: var(--secondary-subtle-color);
   overflow: hidden;
 }
 @media only screen and (min-width: 48rem) {
   .m-banner-card__picture {
-    height: 400px;
+    height: 100px;
   }
 }
 
@@ -1217,7 +1212,7 @@ fieldset {
   flex: 1;
   position: relative;
   padding-top: 48px;
-  height: 400px;
+  height: 200px;
   overflow: hidden;
   border-radius: 0 0 10px 10px;
   background-color: var(--secondary-subtle-color);
@@ -1889,12 +1884,12 @@ fieldset {
 
 .m-logo {
   display: inline-block;
-  height: 40px;
+  height: 50px;
 }
 .m-logo img {
   width: auto;
   border-radius: 0.25rem;
-  max-width: 150px;
+  max-width: 300px;
   height: 100%;
   padding: 10px;
   background-color: var(--logo-background);
@@ -1917,7 +1912,7 @@ fieldset {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 37px;
+    height: 50px;
     overflow-y: hidden;
   }
 }

@@ -211,4 +211,4 @@ module.exports = __webpack_require__(/*! /home/ymir/repos/thebridge/liebling/src
 
 /***/ })
 
-},[[0,"/js/manifest","/js/vendor"]]]);
+},[[0,"/js/manifest"]]]);
