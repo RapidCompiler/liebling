@@ -1,0 +1,14 @@
+.m-offline-subtitle {
+  color: var(--primary-foreground-color);
+  letter-spacing: 0.4px;
+  line-height: 1;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+  @include respond-to("medium") {
+    letter-spacing: 0.5px;
+    font-size: 1.5rem;
+  }
+}

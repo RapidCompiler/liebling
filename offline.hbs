@@ -1,16 +1,12 @@
 {{!--
-This template is used for the posts that are marked as pages.
+This error template is used for all 404 errors, which might occur on your site.
 --}}
 
-{{!-- This block preloads specific assets for the post page --}}
-{{#contentFor "preload"}}
-<link rel="preload" href="{{asset "css/post.css"}}" as="style" />
-<link rel="preload" href="{{asset "js/page.js"}}" as="script" />
-{{/contentFor}}
-
-{{!-- This block loads specific styles for the post page --}}
+{{!-- This block loads specific styles for the 404 page --}}
 {{#contentFor "styles"}}
-<link rel="stylesheet" type="text/css" href="{{asset "css/post.css"}}" media="screen" />
+<link rel="preload" href="{{asset "css/offline.css"}}" as="style" />
+
+<link rel="stylesheet" type="text/css" href="{{asset "css/offline.css"}}" media="screen" />
 {{/contentFor}}
 
 {{!-- The tag below means: insert everything in this file
@@ -18,26 +14,23 @@ into the {body} of the default.hbs template --}}
 {{!< default}}
 
 {{!-- Special header.hbs partial to generate the <header> tag --}}
-{{#post}}
-{{> header background=feature_image}}
-{{/post}}
+{{> header}}
 
-<main class="main-wrap">
+<main class="l-fullscreen">
+  <section class="l-fullscreen__content" data-aos="fade-up" data-aos-delay="300">
+    <h1 id='page-message' class="m-offline-title">Oops!</h1>
+    <p class="m-offline-subtitle">
+      {{t "You are currently" }}
+      <b id='page-status'>offline</b>
+    </p>
+    <p id='page-text' class="m-offline-text">
+      {{t "You might be having network issues!" }}
+    </p>
+    <a href="{{@site.url}}" class="m-button outlined">{{t "Refresh"}}</a>
   </section>
-  <article>
-    <div class="l-content">
-      <div class="l-wrapper in-post" data-aos="fade-up" data-aos-delay="300">
-        <div class="l-post-content">
-          <div class="pos-relative js-post-content">
-            <span>You are currently</span><span><b class='page-status'>online</b></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </article>
 </main>
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
-{{#contentFor "scripts"}}
-<script defer src="{{asset "js/page.js"}}"></script>
-{{/contentFor}}
+{{!-- {{#contentFor "scripts"}}
+<script defer src="/pwa/status.js" ></script>
+{{/contentFor}} --}}

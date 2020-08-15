@@ -28,38 +28,39 @@
   }
 }
 
-.m-404-title {
+.m-offline-title {
   color: var(--primary-foreground-color);
   letter-spacing: 3px;
   line-height: 1;
-  font-size: 9rem;
+  font-size: 6rem;
   font-weight: 700;
   margin: 0 0 10px;
 }
 @media only screen and (min-width: 48rem) {
-  .m-404-title {
+  .m-offline-title {
     letter-spacing: 4px;
-    font-size: 12rem;
+    font-size: 10rem;
     margin-bottom: 5px;
   }
 }
 
-.m-404-subtitle {
+.m-offline-subtitle {
   color: var(--primary-foreground-color);
   letter-spacing: 0.4px;
   line-height: 1;
   font-size: 1.25rem;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 @media only screen and (min-width: 48rem) {
-  .m-404-subtitle {
+  .m-offline-subtitle {
     letter-spacing: 0.5px;
     font-size: 1.5rem;
   }
 }
 
-.m-404-text {
+.m-offline-text {
   letter-spacing: 0.3px;
   line-height: 1.4;
   font-size: 0.875em;
@@ -67,7 +68,7 @@
   margin-bottom: 25px;
 }
 @media only screen and (min-width: 48rem) {
-  .m-404-text {
+  .m-offline-text {
     font-size: 1rem;
     padding: 0;
     margin-bottom: 30px;

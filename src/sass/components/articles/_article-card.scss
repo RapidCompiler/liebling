@@ -141,8 +141,8 @@
   position: absolute;
   top: $mobile-space;
   left: $mobile-space;
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   z-index: 2;
   @include transition(all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1));

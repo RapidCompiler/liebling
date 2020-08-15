@@ -1,7 +1,9 @@
 const CACHE_NAME = 'contentCache';
-const offlineUrl = '/offline';
+const offlineUrl = '/offline/';
 const adminPageSlug = '/ghost';
+
 const toCache = [
+  '/assets/css/offline.css',
   '/pwa/status.js',
   offlineUrl
 ];
@@ -25,48 +27,42 @@ function isHtmlPage(event) {
 }
 
 /**
- * Is the current request for the admin portal resource
- * @param {Object} event
- */
-function isAdminPageResource(event) {
-  return event.request.url.includes(adminPageSlug);
-}
-
-/**
  * Fetch and cache any results as we receive them.
  */
 self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request)
-      .then(response => {
-        // Only return cache if it's not an HTML page
-        if (response && !isHtmlPage(event) && !isAdminPageResource(event)) {
-          return response;
-        }
-
-        return fetch(event.request).then(
-          function (response) {
-            // Dont cache if not a 200 response
-            if (!response || response.status !== 200) {
-              return response;
-            }
-
-            let responseToCache = response.clone();
-            caches.open(CACHE_NAME)
-              .then(function (cache) {
-                cache.put(event.request, responseToCache);
-              });
-
+  if (!event.request.url.includes("/ghost/")) {
+    event.respondWith(
+      caches.match(event.request)
+        .then(response => {
+          // Only return cache if it's not an HTML page
+          if (response && !isHtmlPage(event)) {
             return response;
           }
-        ).catch(error => {
-          // Check if the user is offline first and is trying to navigate to a web page. If so serve offline page.
-          if (isHtmlPage(event)) {
-            return caches.match(offlineUrl);
-          }
-        });
-      })
-  );
+
+          return fetch(event.request).then(
+            function (response) {
+              // Dont cache if not a 200 response
+              if (!response || response.status !== 200) {
+                return response;
+              }
+
+              let responseToCache = response.clone();
+              caches.open(CACHE_NAME)
+                .then(function (cache) {
+                  cache.put(event.request, responseToCache);
+                });
+
+              return response;
+            }
+          ).catch(error => {
+            // Check if the user is offline first and is trying to navigate to a web page. If so serve offline page.
+            if (isHtmlPage(event)) {
+              return caches.match(offlineUrl);
+            }
+          });
+        })
+    );
+  }
 });
 
 self.addEventListener('activate', function (event) {

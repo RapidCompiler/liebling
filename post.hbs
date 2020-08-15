@@ -195,8 +195,7 @@ into the {body} of the default.hbs template --}}
         </div>
       </section>
       {{/get}}
-      {{!-- Email subscribe form at the bottom of the page --}}
-      {{#if @labs.subscribers}}
+      {{!-- {{#if @labs.members}} --}}
       <section class="m-subscribe-section">
         <div class="l-wrapper in-post">
           <div class="m-subscribe-section__content">
@@ -205,31 +204,7 @@ into the {body} of the default.hbs template --}}
               <p class="m-subscribe-section__description">
                 {{t "Get the latest posts delivered right to your inbox."}}
               </p>
-            </div>
-            <div class="m-subscribe-section__form">
-              {{subscribe_form
-                          form_id="subscribe-form"
-                          form_class="m-subscribe-section__form"
-                          input_id="subscribe_input"
-                          input_class="m-input in-subscribe-section"
-                          button_id="subscribe_button"
-                          button_class="m-button primary block"
-                          placeholder=(t "Your email address")
-                        }}
-            </div>
-          </div>
-        </div>
-      </section>
-      {{/if}}
-      {{#if @labs.members}}
-      <section class="m-subscribe-section">
-        <div class="l-wrapper in-post">
-          <div class="m-subscribe-section__content">
-            <div class="m-subscribe-section__text">
-              <h4 class="m-subscribe-section__title">{{t "Subscribe to our newsletter"}}</h4>
-              <p class="m-subscribe-section__description">
-                {{t "Get the latest posts delivered right to your inbox."}}
-              </p>
+              &nbsp;
               <p class="m-subscribe-section__description">
                 {{t "For comments/feedback/suggestions, please write to"}}
                 <a style='color: var(--primary-subtle-color)' href='mailto:thebridgepsg@gmail.com'>
@@ -237,12 +212,14 @@ into the {body} of the default.hbs template --}}
                 </a></p>
             </div>
             <div class="m-subscribe-section__form">
-              {{> "newsletter-form"}}
+              <a rel="noreferrer" rel="noopener" href="https://psgtech.us17.list-manage.com/subscribe/post?u=3724c926db363a7c051db30bb&id=77e355c53b"
+                class="m-button primary block"  target="_blank">{{t "Subscribe"}}</a>
+              {{!-- {{> "newsletter-form"}} --}}
             </div>
           </div>
         </div>
       </section>
-      {{/if}}
+      {{!-- {{/if}} --}}
     </div>
   </article>
 </main>

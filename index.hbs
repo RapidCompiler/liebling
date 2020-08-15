@@ -31,12 +31,13 @@ into the {body} of the default.hbs template --}}
     {{#if @site.description}}
       <p class="m-hero-description bigger">{{@site.description}}</p>
     {{/if}}
-    {{#if @labs.subscribers}}
-      <a href="{{@site.url}}/subscribe" class="m-button filled">{{t "Subscribe"}}</a>
-    {{/if}}
-    {{#if @labs.members}}
-      <a href="{{@site.url}}/newsletter" class="m-button filled">{{t "Subscribe"}}</a>
-    {{/if}}
+    {{!-- {{#if @labs.subscribers}} --}}
+      {{!-- <a href="{{@site.url}}/subscribe" class="m-button filled">{{t "Subscribe"}}</a> --}}
+    {{!-- {{/if}} --}}
+    {{!-- {{#if @labs.members}} --}}
+      {{!-- <a href="https://psgtech.us17.list-manage.com/subscribe/post?u=3724c926db363a7c051db30bb&id=77e355c53b" class="m-button filled">{{t "Subscribe"}}</a> --}}
+    {{!-- {{/if}} --}}
+    <a rel="noreferrer" rel="noopener" href="https://psgtech.us17.list-manage.com/subscribe/post?u=3724c926db363a7c051db30bb&id=77e355c53b" class="m-button filled" target="_blank">{{t "Subscribe"}}</a>
   </div>
   </section>
   <div class="l-content">
