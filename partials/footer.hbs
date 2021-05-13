@@ -18,6 +18,12 @@ This footer template is shared across all the pages.
         </span>
       </a>
     </p>
+    
+    {{#if @site.secondary_navigation}}
+      <nav class="m-footer__nav-secondary" role="navigation" aria-label="{{t "Secondary menu in footer"}}">
+        {{navigation type="secondary"}}
+      </nav>
+    {{/if}}
     <nav class="m-footer-social">
       {{#if @site.facebook}}
         <a
@@ -64,5 +70,16 @@ This footer template is shared across all the pages.
         <span class="icon-rss"></span>
       </a>
     </nav>
+<<<<<<< HEAD
+=======
+    <p class="m-footer-copyright">
+      <span>{{@site.title}} &copy; {{date format="YYYY"}}</span>
+      <span>&nbsp; &bull; &nbsp;</span>
+      <span>{{t "Published with"}} <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></span>
+    </p>
+    <p class="m-footer-copyright jslicense">
+      <a href="{{asset "html/javascript.html"}}" rel="jslicense">{{t "JavaScript license information"}}</a>
+    </p>
+>>>>>>> master
   </div>
 </footer>

@@ -77,6 +77,7 @@ var managePostImages = function managePostImages($) {
 };
 var makeImagesZoomable = function makeImagesZoomable($, mediumZoom) {
   var zoom = mediumZoom('.js-zoomable');
+<<<<<<< HEAD
   zoom.on('open', function (event) {
     if (isMobile() && $(event.target).parent().hasClass('kg-gallery-image')) {
       setTimeout(function () {
@@ -98,6 +99,16 @@ var makeImagesZoomable = function makeImagesZoomable($, mediumZoom) {
       var $mediumZoomImage = $('.medium-zoom-image');
       $mediumZoomImage.removeClass('medium-zoom-image-mobile');
     }
+=======
+  zoom.on('opened', function () {
+    setTimeout(function () {
+      var $mediumZoomImages = $('.medium-zoom-image--opened');
+
+      if ($mediumZoomImages.length > 1) {
+        $mediumZoomImages.last().hide();
+      }
+    }, 10);
+>>>>>>> master
   });
 };
 
@@ -214,11 +225,17 @@ var prepareProgressCircle = function prepareProgressCircle() {
   }, 300);
 };
 
+<<<<<<< HEAD
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   $aosWrapper = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-aos-wrapper');
   var $scrollButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-scrolltop');
   var $loadComments = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-load-comments');
   var $commentsIframe = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-comments-iframe');
+=======
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+  $aosWrapper = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-aos-wrapper');
+  var $scrollButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-scrolltop');
+>>>>>>> master
   var $recommendedSlider = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-recommended-slider');
   fitvids__WEBPACK_IMPORTED_MODULE_2___default()('.js-post-content');
   Object(_helpers__WEBPACK_IMPORTED_MODULE_5__["adjustImageGallery"])();
@@ -285,15 +302,22 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
 
   Object(shave__WEBPACK_IMPORTED_MODULE_3__["default"])('.js-article-card-title', 100);
   Object(shave__WEBPACK_IMPORTED_MODULE_3__["default"])('.js-article-card-title-no-image', 250);
+<<<<<<< HEAD
   $scrollButton.click(function () {
+=======
+  $scrollButton.on('click', function () {
+>>>>>>> master
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('html, body').animate({
       scrollTop: 0
     }, 500);
   });
+<<<<<<< HEAD
   $loadComments.click(function () {
     $loadComments.parent().hide();
     $commentsIframe.fadeIn('slow');
   });
+=======
+>>>>>>> master
   Object(_helpers__WEBPACK_IMPORTED_MODULE_5__["managePostImages"])(jquery__WEBPACK_IMPORTED_MODULE_0___default.a);
   Object(_helpers__WEBPACK_IMPORTED_MODULE_5__["makeImagesZoomable"])(jquery__WEBPACK_IMPORTED_MODULE_0___default.a, medium_zoom__WEBPACK_IMPORTED_MODULE_1__["default"]);
   window.addEventListener('scroll', onScrolling, {
@@ -316,7 +340,11 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('load', function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 module.exports = __webpack_require__(/*! /home/ymir/repos/thebridge/liebling/src/js/post.js */"./js/post.js");
+=======
+module.exports = __webpack_require__(/*! /home/sanjays/Code/TheBridge/liebling/src/js/post.js */"./js/post.js");
+>>>>>>> master
 
 
 /***/ })

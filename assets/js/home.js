@@ -77,6 +77,7 @@ var managePostImages = function managePostImages($) {
 };
 var makeImagesZoomable = function makeImagesZoomable($, mediumZoom) {
   var zoom = mediumZoom('.js-zoomable');
+<<<<<<< HEAD
   zoom.on('open', function (event) {
     if (isMobile() && $(event.target).parent().hasClass('kg-gallery-image')) {
       setTimeout(function () {
@@ -98,6 +99,16 @@ var makeImagesZoomable = function makeImagesZoomable($, mediumZoom) {
       var $mediumZoomImage = $('.medium-zoom-image');
       $mediumZoomImage.removeClass('medium-zoom-image-mobile');
     }
+=======
+  zoom.on('opened', function () {
+    setTimeout(function () {
+      var $mediumZoomImages = $('.medium-zoom-image--opened');
+
+      if ($mediumZoomImages.length > 1) {
+        $mediumZoomImages.last().hide();
+      }
+    }, 10);
+>>>>>>> master
   });
 };
 
@@ -197,7 +208,11 @@ function _arrayLikeToArray(arr, len) {
 
 
 
+<<<<<<< HEAD
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+=======
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+>>>>>>> master
   var $featuredSlider = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-featured-slider');
 
   if ($featuredSlider.length > 0) {
@@ -303,7 +318,11 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 module.exports = __webpack_require__(/*! /home/ymir/repos/thebridge/liebling/src/js/home.js */"./js/home.js");
+=======
+module.exports = __webpack_require__(/*! /home/sanjays/Code/TheBridge/liebling/src/js/home.js */"./js/home.js");
+>>>>>>> master
 
 
 /***/ })

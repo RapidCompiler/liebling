@@ -77,6 +77,7 @@ var managePostImages = function managePostImages($) {
 };
 var makeImagesZoomable = function makeImagesZoomable($, mediumZoom) {
   var zoom = mediumZoom('.js-zoomable');
+<<<<<<< HEAD
   zoom.on('open', function (event) {
     if (isMobile() && $(event.target).parent().hasClass('kg-gallery-image')) {
       setTimeout(function () {
@@ -98,6 +99,16 @@ var makeImagesZoomable = function makeImagesZoomable($, mediumZoom) {
       var $mediumZoomImage = $('.medium-zoom-image');
       $mediumZoomImage.removeClass('medium-zoom-image-mobile');
     }
+=======
+  zoom.on('opened', function () {
+    setTimeout(function () {
+      var $mediumZoomImages = $('.medium-zoom-image--opened');
+
+      if ($mediumZoomImages.length > 1) {
+        $mediumZoomImages.last().hide();
+      }
+    }, 10);
+>>>>>>> master
   });
 };
 
@@ -158,6 +169,7 @@ var makeImagesZoomable = function makeImagesZoomable($, mediumZoom) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./sass/offline.scss":
 /*!***************************!*\
   !*** ./sass/offline.scss ***!
@@ -169,6 +181,8 @@ var makeImagesZoomable = function makeImagesZoomable($, mediumZoom) {
 
 /***/ }),
 
+=======
+>>>>>>> master
 /***/ "./sass/post.scss":
 /*!************************!*\
   !*** ./sass/post.scss ***!
@@ -192,6 +206,7 @@ var makeImagesZoomable = function makeImagesZoomable($, mediumZoom) {
 /***/ }),
 
 /***/ 0:
+<<<<<<< HEAD
 /*!*******************************************************************************************************************************************************************************!*\
   !*** multi ./js/helpers.js ./sass/app.scss ./sass/home.scss ./sass/listing.scss ./sass/post.scss ./sass/newsletter.scss ./sass/tags.scss ./sass/404.scss ./sass/offline.scss ***!
   \*******************************************************************************************************************************************************************************/
@@ -207,8 +222,28 @@ __webpack_require__(/*! /home/ymir/repos/thebridge/liebling/src/sass/newsletter.
 __webpack_require__(/*! /home/ymir/repos/thebridge/liebling/src/sass/tags.scss */"./sass/tags.scss");
 __webpack_require__(/*! /home/ymir/repos/thebridge/liebling/src/sass/404.scss */"./sass/404.scss");
 module.exports = __webpack_require__(/*! /home/ymir/repos/thebridge/liebling/src/sass/offline.scss */"./sass/offline.scss");
+=======
+/*!***********************************************************************************************************************************************************!*\
+  !*** multi ./js/helpers.js ./sass/app.scss ./sass/home.scss ./sass/listing.scss ./sass/post.scss ./sass/newsletter.scss ./sass/tags.scss ./sass/404.scss ***!
+  \***********************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! /home/sanjays/Code/TheBridge/liebling/src/js/helpers.js */"./js/helpers.js");
+__webpack_require__(/*! /home/sanjays/Code/TheBridge/liebling/src/sass/app.scss */"./sass/app.scss");
+__webpack_require__(/*! /home/sanjays/Code/TheBridge/liebling/src/sass/home.scss */"./sass/home.scss");
+__webpack_require__(/*! /home/sanjays/Code/TheBridge/liebling/src/sass/listing.scss */"./sass/listing.scss");
+__webpack_require__(/*! /home/sanjays/Code/TheBridge/liebling/src/sass/post.scss */"./sass/post.scss");
+__webpack_require__(/*! /home/sanjays/Code/TheBridge/liebling/src/sass/newsletter.scss */"./sass/newsletter.scss");
+__webpack_require__(/*! /home/sanjays/Code/TheBridge/liebling/src/sass/tags.scss */"./sass/tags.scss");
+module.exports = __webpack_require__(/*! /home/sanjays/Code/TheBridge/liebling/src/sass/404.scss */"./sass/404.scss");
+>>>>>>> master
 
 
 /***/ })
 
+<<<<<<< HEAD
 },[[0,"/js/manifest"]]]);
+=======
+},[[0,"/js/manifest","/js/vendor"]]]);
+>>>>>>> master
