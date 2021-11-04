@@ -65,14 +65,6 @@ var managePostImages = function managePostImages($) {
     if (!$(this).closest('figure').hasClass('kg-bookmark-card') && !$(this).parent().is('a')) {
       $(this).addClass('js-zoomable');
     }
-
-    var $figcaption = $(this).parent().find('figcaption');
-
-    if ($figcaption) {
-      $(this).attr('alt', $figcaption.text());
-    } else {
-      $(this).attr('alt', '');
-    }
   });
 };
 var makeImagesZoomable = function makeImagesZoomable($, mediumZoom) {

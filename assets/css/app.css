@@ -992,6 +992,10 @@ fieldset {
   }
 }
 
+.l-wrapper.in-caption {
+  padding-top: 10px;
+}
+
 .l-content {
   padding: 40px 0 20px;
 }

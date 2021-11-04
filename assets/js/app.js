@@ -252,7 +252,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     toggleDesktopTopbarOverflow(true);
   });
   $toggleDarkMode.on('mouseleave', function () {
-    toggleDesktopTopbarOverflow(true);
+    toggleDesktopTopbarOverflow(false);
   });
   $closeNotification.on('click', function () {
     closeNotification(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent());
@@ -267,7 +267,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('keyup', function (e) {
     if (e.key === 'Escape' && $search.hasClass('opened')) {
-      $closeSearch.click();
+      $closeSearch.trigger('click');
     }
   });
 
@@ -448,14 +448,6 @@ var managePostImages = function managePostImages($) {
   $('.js-post-content').find('img').each(function () {
     if (!$(this).closest('figure').hasClass('kg-bookmark-card') && !$(this).parent().is('a')) {
       $(this).addClass('js-zoomable');
-    }
-
-    var $figcaption = $(this).parent().find('figcaption');
-
-    if ($figcaption) {
-      $(this).attr('alt', $figcaption.text());
-    } else {
-      $(this).attr('alt', '');
     }
   });
 };
