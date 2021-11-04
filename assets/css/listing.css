@@ -19,7 +19,6 @@
     justify-content: center;
   }
 }
-<<<<<<< HEAD
 @media only screen and (min-width: 48rem) {
   .l-grid.site-centered {
     flex-direction: column;
@@ -27,8 +26,6 @@
     align-items: center;
   }
 }
-=======
->>>>>>> master
 
 .m-pagination {
   display: flex;

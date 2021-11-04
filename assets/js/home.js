@@ -77,29 +77,6 @@ var managePostImages = function managePostImages($) {
 };
 var makeImagesZoomable = function makeImagesZoomable($, mediumZoom) {
   var zoom = mediumZoom('.js-zoomable');
-<<<<<<< HEAD
-  zoom.on('open', function (event) {
-    if (isMobile() && $(event.target).parent().hasClass('kg-gallery-image')) {
-      setTimeout(function () {
-        var $mediumZoomImage = $('.medium-zoom-image--opened');
-        var transform = $mediumZoomImage[0].style.transform;
-        var scale = transform.substr(0, transform.indexOf(' '));
-        var scaleValue = parseFloat(scale.substr(scale.indexOf('(') + 1).split(')')[0]);
-        var translate = transform.substr(transform.indexOf(' ') + 1);
-        var translateY = parseFloat(translate.split(',')[1]);
-        var newTranslateY = translateY < 0 ? scaleValue * translateY + translateY : scaleValue * translateY - translateY;
-        var newTransform = "scale(1) translate3d(0, ".concat(newTranslateY, "px, 0)");
-        $mediumZoomImage.addClass('medium-zoom-image-mobile');
-        $mediumZoomImage[0].style.transform = newTransform;
-      }, 10);
-    }
-  });
-  zoom.on('close', function () {
-    if (isMobile() && $(event.target).parent().hasClass('kg-gallery-image')) {
-      var $mediumZoomImage = $('.medium-zoom-image');
-      $mediumZoomImage.removeClass('medium-zoom-image-mobile');
-    }
-=======
   zoom.on('opened', function () {
     setTimeout(function () {
       var $mediumZoomImages = $('.medium-zoom-image--opened');
@@ -108,7 +85,6 @@ var makeImagesZoomable = function makeImagesZoomable($, mediumZoom) {
         $mediumZoomImages.last().hide();
       }
     }, 10);
->>>>>>> master
   });
 };
 
@@ -208,11 +184,7 @@ function _arrayLikeToArray(arr, len) {
 
 
 
-<<<<<<< HEAD
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-=======
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
->>>>>>> master
   var $featuredSlider = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-featured-slider');
 
   if ($featuredSlider.length > 0) {
@@ -318,11 +290,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-module.exports = __webpack_require__(/*! /home/ymir/repos/thebridge/liebling/src/js/home.js */"./js/home.js");
-=======
 module.exports = __webpack_require__(/*! /home/sanjays/Code/TheBridge/liebling/src/js/home.js */"./js/home.js");
->>>>>>> master
 
 
 /***/ })

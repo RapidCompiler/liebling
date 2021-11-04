@@ -14,14 +14,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var headroom_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! headroom.js */ "./node_modules/headroom.js/dist/headroom.js");
 /* harmony import */ var headroom_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(headroom_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _glidejs_glide_dist_glide_modular_esm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @glidejs/glide/dist/glide.modular.esm */ "./node_modules/@glidejs/glide/dist/glide.modular.esm.js");
-<<<<<<< HEAD
-/* harmony import */ var tippy_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tippy.js */ "./node_modules/tippy.js/esm/index.all.js");
-/* harmony import */ var shave__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! shave */ "./node_modules/shave/dist/shave.es.js");
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var fuse_js_dist_fuse_basic_esm_min_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! fuse.js/dist/fuse.basic.esm.min.js */ "./node_modules/fuse.js/dist/fuse.basic.esm.min.js");
-/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./helpers */ "./js/helpers.js");
-=======
 /* harmony import */ var tippy_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tippy.js */ "./node_modules/tippy.js/dist/tippy.esm.js");
 /* harmony import */ var tippy_js_dist_tippy_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tippy.js/dist/tippy.css */ "./node_modules/tippy.js/dist/tippy.css");
 /* harmony import */ var tippy_js_dist_tippy_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(tippy_js_dist_tippy_css__WEBPACK_IMPORTED_MODULE_4__);
@@ -30,7 +22,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var fuse_js_dist_fuse_basic_esm_min_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! fuse.js/dist/fuse.basic.esm.min.js */ "./node_modules/fuse.js/dist/fuse.basic.esm.min.js");
 /* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./helpers */ "./js/helpers.js");
->>>>>>> master
 
 
 
@@ -39,14 +30,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-<<<<<<< HEAD
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-  if (Object(_helpers__WEBPACK_IMPORTED_MODULE_7__["isRTL"])()) {
-=======
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   if (Object(_helpers__WEBPACK_IMPORTED_MODULE_8__["isRTL"])()) {
->>>>>>> master
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('html').attr('dir', 'rtl').addClass('rtl');
   }
 
@@ -70,10 +56,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   var $closeNotification = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-notification-close');
   var $mainNav = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-main-nav');
   var $mainNavLeft = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-main-nav-left');
-<<<<<<< HEAD
-=======
   var $newsletterElements = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-newsletter');
->>>>>>> master
   var currentSavedTheme = localStorage.getItem('theme');
   var fuse = null;
   var submenuIsOpen = false;
@@ -95,15 +78,12 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     $body.toggleClass('no-scroll-y');
   };
 
-<<<<<<< HEAD
-=======
   var tryToRemoveNewsletter = function tryToRemoveNewsletter() {
     if (typeof disableNewsletter !== 'undefined' && disableNewsletter) {
       $newsletterElements.remove();
     }
   };
 
->>>>>>> master
   var trySearchFeature = function trySearchFeature() {
     if (typeof ghostSearchApiKey !== 'undefined') {
       getAllPosts(ghostHost, ghostSearchApiKey);
@@ -118,11 +98,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     var api = new GhostContentAPI({
       url: host,
       key: key,
-<<<<<<< HEAD
-      version: 'v2'
-=======
       version: 'v4'
->>>>>>> master
     });
     var allPosts = [];
     var fuseOptions = {
@@ -142,11 +118,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
         allPosts.push(posts[i]);
       }
 
-<<<<<<< HEAD
-      fuse = new fuse_js_dist_fuse_basic_esm_min_js__WEBPACK_IMPORTED_MODULE_6__["default"](allPosts, fuseOptions);
-=======
       fuse = new fuse_js_dist_fuse_basic_esm_min_js__WEBPACK_IMPORTED_MODULE_7__["default"](allPosts, fuseOptions);
->>>>>>> master
     })["catch"](function (err) {
       console.log(err);
     });
@@ -171,13 +143,8 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   };
 
   var checkForActionParameter = function checkForActionParameter() {
-<<<<<<< HEAD
-    var action = Object(_helpers__WEBPACK_IMPORTED_MODULE_7__["getParameterByName"])('action');
-    var stripe = Object(_helpers__WEBPACK_IMPORTED_MODULE_7__["getParameterByName"])('stripe');
-=======
     var action = Object(_helpers__WEBPACK_IMPORTED_MODULE_8__["getParameterByName"])('action');
     var stripe = Object(_helpers__WEBPACK_IMPORTED_MODULE_8__["getParameterByName"])('stripe');
->>>>>>> master
 
     if (action === 'subscribe') {
       showNotification('subscribe');
@@ -201,11 +168,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   };
 
   var toggleDesktopTopbarOverflow = function toggleDesktopTopbarOverflow(disableOverflow) {
-<<<<<<< HEAD
-    if (!Object(_helpers__WEBPACK_IMPORTED_MODULE_7__["isMobile"])()) {
-=======
     if (!Object(_helpers__WEBPACK_IMPORTED_MODULE_8__["isMobile"])()) {
->>>>>>> master
       if (disableOverflow) {
         $mainNav.addClass('toggle-overflow');
         $mainNavLeft.addClass('toggle-overflow');
@@ -216,29 +179,17 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     }
   };
 
-<<<<<<< HEAD
-  $openMenu.click(function () {
-=======
   $openMenu.on('click', function () {
->>>>>>> master
     $header.addClass('mobile-menu-opened');
     $menu.addClass('opened');
     toggleScrollVertical();
   });
-<<<<<<< HEAD
-  $closeMenu.click(function () {
-=======
   $closeMenu.on('click', function () {
->>>>>>> master
     $header.removeClass('mobile-menu-opened');
     $menu.removeClass('opened');
     toggleScrollVertical();
   });
-<<<<<<< HEAD
-  $toggleSubmenu.click(function () {
-=======
   $toggleSubmenu.on('click', function () {
->>>>>>> master
     submenuIsOpen = !submenuIsOpen;
 
     if (submenuIsOpen) {
@@ -247,21 +198,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       hideSubmenu();
     }
   });
-<<<<<<< HEAD
-  $openSearch.click(function () {
-    $search.addClass('opened');
-    setTimeout(function () {
-      $inputSearch.focus();
-    }, 400);
-    toggleScrollVertical();
-  });
-  $closeSearch.click(function () {
-    $inputSearch.blur();
-    $search.removeClass('opened');
-    toggleScrollVertical();
-  });
-  $inputSearch.keyup(function () {
-=======
   $openSearch.on('click', function () {
     $search.addClass('opened');
     setTimeout(function () {
@@ -275,7 +211,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     toggleScrollVertical();
   });
   $inputSearch.on('keyup', function () {
->>>>>>> master
     if ($inputSearch.val().length > 0 && fuse) {
       var results = fuse.search($inputSearch.val());
       var bestResults = results.filter(function (result) {
@@ -287,11 +222,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 
       if (bestResults.length > 0) {
         for (var i = 0, len = bestResults.length; i < len; i++) {
-<<<<<<< HEAD
-          htmlString += "\n          <article class=\"m-result\">            <a href=\"".concat(bestResults[i].item.url, "\" class=\"m-result__link\">              <h3 class=\"m-result__title\">").concat(bestResults[i].item.title, "</h3>              <span class=\"m-result__date\">").concat(Object(_helpers__WEBPACK_IMPORTED_MODULE_7__["formatDate"])(bestResults[i].item.published_at), "</span>            </a>          </article>");
-=======
           htmlString += "\n          <article class=\"m-result\">            <a href=\"".concat(bestResults[i].item.url, "\" class=\"m-result__link\">              <h3 class=\"m-result__title\">").concat(bestResults[i].item.title, "</h3>              <span class=\"m-result__date\">").concat(Object(_helpers__WEBPACK_IMPORTED_MODULE_8__["formatDate"])(bestResults[i].item.published_at), "</span>            </a>          </article>");
->>>>>>> master
         }
 
         $searchNoResults.hide();
@@ -308,11 +239,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       $searchNoResults.hide();
     }
   });
-<<<<<<< HEAD
-  $toggleDarkMode.change(function () {
-=======
   $toggleDarkMode.on('change', function () {
->>>>>>> master
     if ($toggleDarkMode.is(':checked')) {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('html').attr('data-theme', 'dark');
       localStorage.setItem('theme', 'dark');
@@ -321,17 +248,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       localStorage.setItem('theme', 'light');
     }
   });
-<<<<<<< HEAD
-  $toggleDarkMode.hover(function () {
-    toggleDesktopTopbarOverflow(true);
-  }, function () {
-    toggleDesktopTopbarOverflow(false);
-  });
-  $closeNotification.click(function () {
-    closeNotification(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent());
-  });
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).click(function (e) {
-=======
   $toggleDarkMode.on('mouseenter', function () {
     toggleDesktopTopbarOverflow(true);
   });
@@ -342,7 +258,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     closeNotification(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent());
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('click', function (e) {
->>>>>>> master
     if (submenuIsOpen) {
       if ($submenuOption && !$submenuOption.contains(e.target)) {
         submenuIsOpen = false;
@@ -350,11 +265,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       }
     }
   });
-<<<<<<< HEAD
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).keyup(function (e) {
-=======
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('keyup', function (e) {
->>>>>>> master
     if (e.key === 'Escape' && $search.hasClass('opened')) {
       $closeSearch.click();
     }
@@ -367,11 +278,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       $toggleDarkMode.attr('checked', true);
     }
   } else {
-<<<<<<< HEAD
-    if (Object(_helpers__WEBPACK_IMPORTED_MODULE_7__["isDarkMode"])()) {
-=======
     if (Object(_helpers__WEBPACK_IMPORTED_MODULE_8__["isDarkMode"])()) {
->>>>>>> master
       $toggleDarkMode.attr('checked', true);
     }
   }
@@ -384,11 +291,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       },
       offset: 15,
       onUnpin: function onUnpin() {
-<<<<<<< HEAD
-        if (!Object(_helpers__WEBPACK_IMPORTED_MODULE_7__["isMobile"])() && secondaryMenuTippy) {
-=======
         if (!Object(_helpers__WEBPACK_IMPORTED_MODULE_8__["isMobile"])() && secondaryMenuTippy) {
->>>>>>> master
           var desktopSecondaryMenuTippy = secondaryMenuTippy[0];
 
           if (desktopSecondaryMenuTippy && desktopSecondaryMenuTippy.state.isVisible) {
@@ -408,11 +311,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       swipeThreshold: false,
       dragThreshold: false,
       gap: 0,
-<<<<<<< HEAD
-      direction: Object(_helpers__WEBPACK_IMPORTED_MODULE_7__["isRTL"])() ? 'rtl' : 'ltr',
-=======
       direction: Object(_helpers__WEBPACK_IMPORTED_MODULE_8__["isRTL"])() ? 'rtl' : 'ltr',
->>>>>>> master
       breakpoints: {
         1024: {
           perView: 3,
@@ -440,11 +339,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       }
     });
     recentSlider.on('mount.after', function () {
-<<<<<<< HEAD
-      Object(shave__WEBPACK_IMPORTED_MODULE_4__["default"])('.js-recent-article-title', 50);
-=======
       Object(shave__WEBPACK_IMPORTED_MODULE_5__["default"])('.js-recent-article-title', 50);
->>>>>>> master
     });
     recentSlider.mount({
       Swipe: _glidejs_glide_dist_glide_modular_esm__WEBPACK_IMPORTED_MODULE_2__["Swipe"],
@@ -453,11 +348,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   }
 
   if (typeof disableFadeAnimation === 'undefined' || !disableFadeAnimation) {
-<<<<<<< HEAD
-    aos__WEBPACK_IMPORTED_MODULE_5___default.a.init({
-=======
     aos__WEBPACK_IMPORTED_MODULE_6___default.a.init({
->>>>>>> master
       once: true,
       startEvent: 'DOMContentLoaded'
     });
@@ -468,10 +359,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   if ($openSecondaryMenu.length > 0) {
     var template = document.getElementById('secondary-navigation-template');
     secondaryMenuTippy = Object(tippy_js__WEBPACK_IMPORTED_MODULE_3__["default"])('.js-open-secondary-menu', {
-<<<<<<< HEAD
-=======
       appendTo: document.body,
->>>>>>> master
       content: template.innerHTML,
       allowHTML: true,
       arrow: true,
@@ -487,16 +375,10 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   }
 
   Object(tippy_js__WEBPACK_IMPORTED_MODULE_3__["default"])('.js-tooltip');
-<<<<<<< HEAD
-  Object(shave__WEBPACK_IMPORTED_MODULE_4__["default"])('.js-article-card-title', 100);
-  Object(shave__WEBPACK_IMPORTED_MODULE_4__["default"])('.js-article-card-title-no-image', 250);
-  checkForActionParameter();
-=======
   Object(shave__WEBPACK_IMPORTED_MODULE_5__["default"])('.js-article-card-title', 100);
   Object(shave__WEBPACK_IMPORTED_MODULE_5__["default"])('.js-article-card-title-no-image', 250);
   checkForActionParameter();
   tryToRemoveNewsletter();
->>>>>>> master
   trySearchFeature();
 });
 
@@ -579,29 +461,6 @@ var managePostImages = function managePostImages($) {
 };
 var makeImagesZoomable = function makeImagesZoomable($, mediumZoom) {
   var zoom = mediumZoom('.js-zoomable');
-<<<<<<< HEAD
-  zoom.on('open', function (event) {
-    if (isMobile() && $(event.target).parent().hasClass('kg-gallery-image')) {
-      setTimeout(function () {
-        var $mediumZoomImage = $('.medium-zoom-image--opened');
-        var transform = $mediumZoomImage[0].style.transform;
-        var scale = transform.substr(0, transform.indexOf(' '));
-        var scaleValue = parseFloat(scale.substr(scale.indexOf('(') + 1).split(')')[0]);
-        var translate = transform.substr(transform.indexOf(' ') + 1);
-        var translateY = parseFloat(translate.split(',')[1]);
-        var newTranslateY = translateY < 0 ? scaleValue * translateY + translateY : scaleValue * translateY - translateY;
-        var newTransform = "scale(1) translate3d(0, ".concat(newTranslateY, "px, 0)");
-        $mediumZoomImage.addClass('medium-zoom-image-mobile');
-        $mediumZoomImage[0].style.transform = newTransform;
-      }, 10);
-    }
-  });
-  zoom.on('close', function () {
-    if (isMobile() && $(event.target).parent().hasClass('kg-gallery-image')) {
-      var $mediumZoomImage = $('.medium-zoom-image');
-      $mediumZoomImage.removeClass('medium-zoom-image-mobile');
-    }
-=======
   zoom.on('opened', function () {
     setTimeout(function () {
       var $mediumZoomImages = $('.medium-zoom-image--opened');
@@ -610,7 +469,6 @@ var makeImagesZoomable = function makeImagesZoomable($, mediumZoom) {
         $mediumZoomImages.last().hide();
       }
     }, 10);
->>>>>>> master
   });
 };
 
@@ -623,11 +481,7 @@ var makeImagesZoomable = function makeImagesZoomable($, mediumZoom) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-module.exports = __webpack_require__(/*! /home/ymir/repos/thebridge/liebling/src/js/app.js */"./js/app.js");
-=======
 module.exports = __webpack_require__(/*! /home/sanjays/Code/TheBridge/liebling/src/js/app.js */"./js/app.js");
->>>>>>> master
 
 
 /***/ })
