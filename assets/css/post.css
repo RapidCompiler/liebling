@@ -18,7 +18,7 @@
   white-space: nowrap;
 }
 
-.focusable:focus, .m-button:focus, .l-post-content button:focus:not(.m-icon-button) {
+.focusable:focus, .m-button:focus, .l-post-content button:focus:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-button-card a.kg-btn:focus, .l-post-content .kg-header-card .kg-header-card-button:focus, .l-post-content .kg-product-card .kg-product-card-button:focus {
   box-shadow: 0 0 0 2px var(--primary-subtle-color) !important;
 }
 
@@ -28,9 +28,9 @@
   justify-content: center;
 }
 
-.no-appearance, .m-input, .l-post-content input,
+.no-appearance, .m-input, .l-post-content input:not(.kg-video-card input):not(.kg-audio-card input),
 .l-post-content textarea,
-.l-post-content select, .m-button, .l-post-content button:not(.m-icon-button) {
+.l-post-content select, .m-button, .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-button-card a.kg-btn, .l-post-content .kg-header-card .kg-header-card-button, .l-post-content .kg-product-card .kg-product-card-button {
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
        appearance: none !important;
@@ -196,7 +196,8 @@
 .l-post-content p img {
   margin-bottom: 0 !important;
 }
-.l-post-content b, .l-post-content strong {
+.l-post-content b,
+.l-post-content strong {
   font-weight: 600;
 }
 .l-post-content em {
@@ -210,7 +211,8 @@
 .l-post-content a:hover {
   color: var(--link-color);
 }
-.l-post-content ul, .l-post-content ol {
+.l-post-content ul,
+.l-post-content ol {
   letter-spacing: 0.2px;
   line-height: 1.5;
   font-size: 1.125rem;
@@ -218,7 +220,8 @@
   margin: 0 0 20px 0;
 }
 @media only screen and (min-width: 48rem) {
-  .l-post-content ul, .l-post-content ol {
+  .l-post-content ul,
+.l-post-content ol {
     letter-spacing: 0.3px;
     line-height: 1.6;
     font-size: 1.25rem;
@@ -390,6 +393,26 @@
     margin-bottom: 30px;
   }
 }
+.l-post-content blockquote.kg-blockquote-alt {
+  color: var(--primary-subtle-color);
+  line-height: 1.2;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media only screen and (min-width: 48rem) {
+  .l-post-content blockquote.kg-blockquote-alt {
+    font-size: 2.625rem;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+.l-post-content blockquote.kg-blockquote-alt:before {
+  display: none;
+}
 .l-post-content blockquote:before {
   content: '"';
   position: absolute;
@@ -505,7 +528,7 @@
     margin-bottom: 30px;
   }
 }
-.l-post-content input,
+.l-post-content input:not(.kg-video-card input):not(.kg-audio-card input),
 .l-post-content textarea,
 .l-post-content select {
   margin-bottom: 20px;
@@ -522,7 +545,7 @@
   background-size: 15px 8px;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5IiBoZWlnaHQ9IjUiIHZpZXdCb3g9IjAgMCA5IDUiPgogICAgPHBhdGggZmlsbD0iIzU2NWU2MCIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNOC4zMi41N2EuMjQ3LjI0NyAwIDAgMSAwIC4zNkw0LjY4IDQuNTdhLjI0Ny4yNDcgMCAwIDEtLjM2IDBMLjY4LjkzYS4yNDcuMjQ3IDAgMCAxIDAtLjM2bC4zOS0uMzlhLjI0Ny4yNDcgMCAwIDEgLjM2IDBMNC41IDMuMjUgNy41Ny4xOGEuMjQ3LjI0NyAwIDAgMSAuMzYgMGwuMzkuMzl6Ii8+Cjwvc3ZnPgo=");
 }
-.l-post-content button:not(.m-icon-button) {
+.l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) {
   border: 1px solid var(--primary-foreground-color) !important;
 }
 .l-post-content .kg-bookmark-card {
@@ -625,13 +648,185 @@
     order: 2;
   }
 }
+.l-post-content .kg-nft-card .kg-nft-card-container {
+  border-radius: 20px;
+  background-color: var(--background-color);
+}
+.l-post-content .kg-nft-card .kg-ntf-image-container {
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+}
+.l-post-content .kg-nft-card .kg-nft-metadata {
+  border-radius: 0 0 20px 20px;
+}
+.l-post-content .kg-nft-card .kg-nft-header {
+  margin-bottom: 10px;
+}
+.l-post-content .kg-nft-card .kg-nft-header img {
+  display: inline-block;
+  width: 100px;
+  max-width: 100px;
+  margin: 0;
+  filter: invert(var(--kg-card-img-invert-color));
+}
+.l-post-content .kg-nft-card .kg-nft-title {
+  color: var(--secondary-foreground-color);
+  padding-top: 0;
+}
+.l-post-content .kg-nft-card kg-nft-description,
+.l-post-content .kg-nft-card .kg-nft-creator {
+  color: var(--primary-foreground-color);
+}
+.l-post-content .kg-nft-card kg-nft-description span,
+.l-post-content .kg-nft-card .kg-nft-creator span {
+  color: var(--secondary-foreground-color);
+}
+.l-post-content .kg-button-card {
+  padding: 30px 0;
+  margin-bottom: 25px;
+}
+.l-post-content .kg-button-card a.kg-btn {
+  color: #fff !important;
+  font-family: inherit !important;
+  height: auto;
+  background-color: var(--primary-subtle-color) !important;
+  box-shadow: 0 2px 4px var(--button-shadow-color-normal), 0 0 0 transparent;
+}
+.l-post-content .kg-button-card a.kg-btn:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--button-shadow-color-hover), 0 0 0 transparent;
+}
+.l-post-content .kg-callout-card {
+  margin-bottom: 25px;
+}
+@media only screen and (min-width: 48rem) {
+  .l-post-content .kg-callout-card {
+    margin-bottom: 30px;
+  }
+}
+.l-post-content .kg-callout-card .kg-callout-emoji {
+  padding-right: 24px;
+}
+.l-post-content .kg-callout-card .kg-callout-text {
+  font-size: 1.0625rem;
+}
+@media only screen and (min-width: 48rem) {
+  .l-post-content .kg-callout-card .kg-callout-text {
+    font-size: 1.125rem;
+  }
+}
+.l-post-content .kg-header-card {
+  width: 100vw;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+@media only screen and (min-width: 48rem) {
+  .l-post-content .kg-header-card {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+.l-post-content .kg-header-card.kg-style-light .kg-header-card-header,
+.l-post-content .kg-header-card.kg-style-light .kg-header-card-subheader {
+  color: #333;
+}
+.l-post-content .kg-header-card.kg-style-light .kg-header-card-button {
+  color: #fff !important;
+  background-color: var(--primary-subtle-color) !important;
+}
+.l-post-content .kg-header-card .kg-header-card-button {
+  color: #333 !important;
+  font-family: inherit;
+  height: auto !important;
+  background-color: #fff !important;
+}
+.l-post-content .kg-header-card .kg-header-card-button:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--button-shadow-color-hover), 0 0 0 transparent;
+}
+.l-post-content .kg-toggle-card {
+  margin-bottom: 20px;
+}
+.l-post-content .kg-toggle-card .kg-toggle-heading-text {
+  padding-top: 0;
+}
+.l-post-content .kg-toggle-card .kg-toggle-card-icon {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border: 0 !important;
+  padding: 0;
+}
+.l-post-content .kg-product-card {
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 48rem) {
+  .l-post-content .kg-product-card {
+    margin-bottom: 40px;
+  }
+}
+.l-post-content .kg-product-card .kg-product-card-image {
+  margin-bottom: 0;
+  border-radius: 5px;
+}
+.l-post-content .kg-product-card .kg-product-card-title {
+  padding-top: 0;
+  font-family: inherit;
+}
+.l-post-content .kg-product-card .kg-product-card-description p {
+  font-family: inherit;
+}
+.l-post-content .kg-product-card .kg-product-card-button {
+  color: #fff !important;
+  font-family: inherit !important;
+  height: auto;
+  background-color: var(--primary-subtle-color) !important;
+}
+.l-post-content .kg-file-card {
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 48rem) {
+  .l-post-content .kg-file-card {
+    margin-bottom: 40px;
+  }
+}
+.l-post-content .kg-audio-card {
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 48rem) {
+  .l-post-content .kg-audio-card {
+    margin-bottom: 40px;
+  }
+}
+.l-post-content .kg-audio-card img {
+  margin: 8px;
+}
+.l-post-content .kg-audio-card .kg-audio-play-icon svg,
+.l-post-content .kg-audio-card .kg-audio-pause-icon svg,
+.l-post-content .kg-audio-card .kg-audio-unmute-icon svg,
+.l-post-content .kg-audio-card .kg-audio-mute-icon svg {
+  fill: var(--secondary-foreground-color);
+}
+.l-post-content .kg-audio-card .kg-audio-playback-rate {
+  color: var(--secondary-foreground-color);
+}
+.l-post-content .kg-audio-card .kg-audio-seek-slider:before,
+.l-post-content .kg-audio-card .kg-audio-volume-slider:before {
+  background-color: var(--secondary-foreground-color);
+}
 
-.rtl .l-post-content ul, .rtl .l-post-content ol {
+.rtl .l-post-content ul,
+.rtl .l-post-content ol {
   padding-left: 0;
   padding-right: 20px;
 }
 @media only screen and (min-width: 48rem) {
-  .rtl .l-post-content ul, .rtl .l-post-content ol {
+  .rtl .l-post-content ul,
+.rtl .l-post-content ol {
     padding-left: 0;
     padding-right: 40px;
   }
@@ -654,8 +849,20 @@
     transform: translateX(50%);
   }
 }
+.rtl .l-post-content .kg-callout-card .kg-callout-emoji {
+  padding-right: auto;
+  padding-left: 24px;
+}
+.rtl .l-post-content .kg-toggle-card .kg-toggle-card-icon {
+  margin-left: 0;
+  margin-right: 16px;
+}
+.rtl .l-post-content .kg-product-card .kg-product-card-rating {
+  padding-left: 0;
+  padding-right: 16px;
+}
 
-.m-button, .l-post-content button:not(.m-icon-button) {
+.m-button, .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-button-card a.kg-btn, .l-post-content .kg-header-card .kg-header-card-button, .l-post-content .kg-product-card .kg-product-card-button {
   display: inline-block;
   color: #333;
   text-align: center;
@@ -672,34 +879,34 @@
   background-color: transparent;
   transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
 }
-.m-button.outlined, .l-post-content button.outlined:not(.m-icon-button) {
+.m-button.outlined, .l-post-content button.outlined:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-button-card a.outlined.kg-btn, .l-post-content .kg-header-card .outlined.kg-header-card-button, .l-post-content .kg-product-card .outlined.kg-product-card-button {
   color: var(--titles-color);
   border: 1px solid var(--primary-foreground-color);
 }
-.m-button.filled, .l-post-content button.filled:not(.m-icon-button), .m-button.primary, .l-post-content button.primary:not(.m-icon-button) {
+.m-button.filled, .l-post-content button.filled:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-button-card a.filled.kg-btn, .l-post-content .kg-header-card .filled.kg-header-card-button, .l-post-content .kg-product-card .filled.kg-product-card-button, .m-button.primary, .l-post-content button.primary:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-button-card a.primary.kg-btn, .l-post-content .kg-header-card .primary.kg-header-card-button, .l-post-content .kg-product-card .primary.kg-product-card-button {
   box-shadow: 0 2px 4px var(--button-shadow-color-normal), 0 0 0 transparent;
 }
-.m-button.filled:hover, .l-post-content button.filled:hover:not(.m-icon-button), .m-button.primary:hover, .l-post-content button.primary:hover:not(.m-icon-button) {
+.m-button.filled:hover, .l-post-content button.filled:hover:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-button-card a.filled.kg-btn:hover, .l-post-content .kg-header-card .filled.kg-header-card-button:hover, .l-post-content .kg-product-card .filled.kg-product-card-button:hover, .m-button.primary:hover, .l-post-content button.primary:hover:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-button-card a.primary.kg-btn:hover, .l-post-content .kg-header-card .primary.kg-header-card-button:hover, .l-post-content .kg-product-card .primary.kg-product-card-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px var(--button-shadow-color-hover), 0 0 0 transparent;
 }
-.m-button.filled, .l-post-content button.filled:not(.m-icon-button) {
+.m-button.filled, .l-post-content button.filled:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-button-card a.filled.kg-btn, .l-post-content .kg-header-card .filled.kg-header-card-button, .l-post-content .kg-product-card .filled.kg-product-card-button {
   border-radius: 5px;
   background-color: #fff;
 }
-.m-button.block, .l-post-content button.block:not(.m-icon-button) {
+.m-button.block, .l-post-content button.block:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-button-card a.block.kg-btn, .l-post-content .kg-header-card .block.kg-header-card-button, .l-post-content .kg-product-card .block.kg-product-card-button {
   display: block;
   width: 100%;
 }
-.m-button.primary, .l-post-content button.primary:not(.m-icon-button) {
+.m-button.primary, .l-post-content button.primary:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-button-card a.primary.kg-btn, .l-post-content .kg-header-card .primary.kg-header-card-button, .l-post-content .kg-product-card .primary.kg-product-card-button {
   color: #fff;
   background-color: var(--primary-subtle-color);
 }
-.m-button.loading, .m-subscribe-section__container.loading .m-button, .l-post-content button.loading:not(.m-icon-button), .m-subscribe-section__container.loading .l-post-content button:not(.m-icon-button), .l-post-content .m-subscribe-section__container.loading button:not(.m-icon-button) {
+.m-button.loading, .m-subscribe-section__container.loading .m-button, .l-post-content button.loading:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .m-subscribe-section__container.loading button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-button-card a.loading.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-button-card a.kg-btn, .l-post-content .kg-button-card .m-subscribe-section__container.loading a.kg-btn, .l-post-content .kg-header-card .loading.kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card .kg-header-card-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading .kg-header-card-button, .l-post-content .kg-product-card .loading.kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .kg-product-card-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading .kg-product-card-button {
   cursor: default;
   overflow: hidden;
 }
-.m-button.loading:after, .m-subscribe-section__container.loading .m-button:after, .l-post-content button.loading:not(.m-icon-button):after, .m-subscribe-section__container.loading .l-post-content button:not(.m-icon-button):after, .l-post-content .m-subscribe-section__container.loading button:not(.m-icon-button):after {
+.m-button.loading:after, .m-subscribe-section__container.loading .m-button:after, .l-post-content button.loading:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button):after, .m-subscribe-section__container.loading .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button):after, .l-post-content .m-subscribe-section__container.loading button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button):after, .l-post-content .kg-button-card a.loading.kg-btn:after, .m-subscribe-section__container.loading .l-post-content .kg-button-card a.kg-btn:after, .l-post-content .kg-button-card .m-subscribe-section__container.loading a.kg-btn:after, .l-post-content .kg-header-card .loading.kg-header-card-button:after, .m-subscribe-section__container.loading .l-post-content .kg-header-card .kg-header-card-button:after, .l-post-content .kg-header-card .m-subscribe-section__container.loading .kg-header-card-button:after, .l-post-content .kg-product-card .loading.kg-product-card-button:after, .m-subscribe-section__container.loading .l-post-content .kg-product-card .kg-product-card-button:after, .l-post-content .kg-product-card .m-subscribe-section__container.loading .kg-product-card-button:after {
   content: "";
   position: absolute;
   left: 0;
@@ -733,7 +940,7 @@
   }
 }
 
-.m-input, .l-post-content input,
+.m-input, .l-post-content input:not(.kg-video-card input):not(.kg-audio-card input),
 .l-post-content textarea,
 .l-post-content select {
   color: var(--primary-foreground-color);
@@ -747,26 +954,26 @@
   outline: 0;
   background-color: var(--background-color);
 }
-.m-input:focus, .l-post-content input:focus,
+.m-input:focus, .l-post-content input:focus:not(.kg-video-card input):not(.kg-audio-card input),
 .l-post-content textarea:focus,
 .l-post-content select:focus {
   border-color: var(--primary-subtle-color);
 }
-.m-input.in-search, .l-post-content input.in-search,
+.m-input.in-search, .l-post-content input.in-search:not(.kg-video-card input):not(.kg-audio-card input),
 .l-post-content textarea.in-search,
 .l-post-content select.in-search {
   font-weight: 600;
   padding-left: 40px;
 }
 @media only screen and (min-width: 48rem) {
-  .m-input.in-search, .l-post-content input.in-search,
+  .m-input.in-search, .l-post-content input.in-search:not(.kg-video-card input):not(.kg-audio-card input),
 .l-post-content textarea.in-search,
 .l-post-content select.in-search {
     font-size: 1.25rem;
     padding: 15px 30px 15px 60px;
   }
 }
-.m-input.in-subscribe-section, .l-post-content input.in-subscribe-section,
+.m-input.in-subscribe-section, .l-post-content input.in-subscribe-section:not(.kg-video-card input):not(.kg-audio-card input),
 .l-post-content textarea.in-subscribe-section,
 .l-post-content select.in-subscribe-section {
   margin-bottom: 15px;
@@ -850,6 +1057,7 @@
 }
 @media only screen and (min-width: 64rem) {
   .m-share__content {
+    position: -webkit-sticky;
     position: sticky;
     top: 100px;
     flex-direction: column-reverse;
@@ -934,7 +1142,7 @@
   }
 }
 
-.m-subscribe-section__container.loading .m-button, .m-subscribe-section__container.loading .l-post-content button:not(.m-icon-button), .l-post-content .m-subscribe-section__container.loading button:not(.m-icon-button) {
+.m-subscribe-section__container.loading .m-button, .m-subscribe-section__container.loading .m-subscribe-section__container.m-button .m-button, .m-subscribe-section__container.loading .l-post-content button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .m-button, .l-post-content .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .m-button, .m-subscribe-section__container.loading .l-post-content .kg-button-card a.m-subscribe-section__container.kg-btn .m-button, .l-post-content .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn .m-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card .m-subscribe-section__container.kg-header-card-button .m-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button .m-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .m-subscribe-section__container.kg-product-card-button .m-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button .m-button, .m-subscribe-section__container.loading .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .m-subscribe-section__container.m-button .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content .kg-button-card a.m-subscribe-section__container.kg-btn .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content .kg-header-card .m-subscribe-section__container.kg-header-card-button .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content .kg-product-card .m-subscribe-section__container.kg-product-card-button .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button .l-post-content button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .m-subscribe-section__container.loading button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .m-subscribe-section__container.loading .m-subscribe-section__container.m-button button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content .m-subscribe-section__container.m-button button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content .kg-button-card a.m-subscribe-section__container.kg-btn button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content .kg-header-card .m-subscribe-section__container.kg-header-card-button button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content .kg-product-card .m-subscribe-section__container.kg-product-card-button button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .l-post-content .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button button:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button), .m-subscribe-section__container.loading .l-post-content .kg-button-card a.kg-btn, .m-subscribe-section__container.loading .m-subscribe-section__container.m-button .l-post-content .kg-button-card a.kg-btn, .m-subscribe-section__container.loading .l-post-content button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .l-post-content .kg-button-card a.kg-btn, .l-post-content .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .l-post-content .kg-button-card a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-button-card a.m-subscribe-section__container.kg-btn .l-post-content .kg-button-card a.kg-btn, .l-post-content .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn .l-post-content .kg-button-card a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-header-card .m-subscribe-section__container.kg-header-card-button .l-post-content .kg-button-card a.kg-btn, .l-post-content .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button .l-post-content .kg-button-card a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-product-card .m-subscribe-section__container.kg-product-card-button .l-post-content .kg-button-card a.kg-btn, .l-post-content .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button .l-post-content .kg-button-card a.kg-btn, .l-post-content .kg-button-card .m-subscribe-section__container.loading a.kg-btn, .l-post-content .kg-button-card .m-subscribe-section__container.loading .m-subscribe-section__container.m-button a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-button-card .m-subscribe-section__container.m-button a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-button-card button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) a.kg-btn, .l-post-content .kg-button-card .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) a.kg-btn, .l-post-content .m-subscribe-section__container.loading .kg-button-card button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-button-card a.m-subscribe-section__container.kg-btn a.kg-btn, .l-post-content .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-button-card .kg-header-card .m-subscribe-section__container.kg-header-card-button a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-header-card .kg-button-card .m-subscribe-section__container.kg-header-card-button a.kg-btn, .l-post-content .kg-button-card .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button a.kg-btn, .l-post-content .kg-header-card .m-subscribe-section__container.loading .kg-button-card .m-subscribe-section__container.kg-header-card-button a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-button-card .kg-product-card .m-subscribe-section__container.kg-product-card-button a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-product-card .kg-button-card .m-subscribe-section__container.kg-product-card-button a.kg-btn, .l-post-content .kg-button-card .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button a.kg-btn, .l-post-content .kg-product-card .m-subscribe-section__container.loading .kg-button-card .m-subscribe-section__container.kg-product-card-button a.kg-btn, .m-subscribe-section__container.loading .l-post-content .kg-header-card .kg-header-card-button, .m-subscribe-section__container.loading .m-subscribe-section__container.m-button .l-post-content .kg-header-card .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .l-post-content .kg-header-card .kg-header-card-button, .l-post-content .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .l-post-content .kg-header-card .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-button-card a.m-subscribe-section__container.kg-btn .l-post-content .kg-header-card .kg-header-card-button, .l-post-content .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn .l-post-content .kg-header-card .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card .m-subscribe-section__container.kg-header-card-button .l-post-content .kg-header-card .kg-header-card-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button .l-post-content .kg-header-card .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .m-subscribe-section__container.kg-product-card-button .l-post-content .kg-header-card .kg-header-card-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button .l-post-content .kg-header-card .kg-header-card-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading .kg-header-card-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.m-button .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card .m-subscribe-section__container.m-button .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .kg-header-card-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .kg-header-card-button, .l-post-content .m-subscribe-section__container.loading .kg-header-card button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card .kg-button-card a.m-subscribe-section__container.kg-btn .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-button-card .kg-header-card a.m-subscribe-section__container.kg-btn .kg-header-card-button, .l-post-content .kg-header-card .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn .kg-header-card-button, .l-post-content .kg-button-card .m-subscribe-section__container.loading .kg-header-card a.m-subscribe-section__container.kg-btn .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card .m-subscribe-section__container.kg-header-card-button .kg-header-card-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card .kg-product-card .m-subscribe-section__container.kg-product-card-button .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .kg-header-card .m-subscribe-section__container.kg-product-card-button .kg-header-card-button, .l-post-content .kg-header-card .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button .kg-header-card-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading .kg-header-card .m-subscribe-section__container.kg-product-card-button .kg-header-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .kg-product-card-button, .m-subscribe-section__container.loading .m-subscribe-section__container.m-button .l-post-content .kg-product-card .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .l-post-content .kg-product-card .kg-product-card-button, .l-post-content .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .l-post-content .kg-product-card .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-button-card a.m-subscribe-section__container.kg-btn .l-post-content .kg-product-card .kg-product-card-button, .l-post-content .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn .l-post-content .kg-product-card .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card .m-subscribe-section__container.kg-header-card-button .l-post-content .kg-product-card .kg-product-card-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button .l-post-content .kg-product-card .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .m-subscribe-section__container.kg-product-card-button .l-post-content .kg-product-card .kg-product-card-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button .l-post-content .kg-product-card .kg-product-card-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading .kg-product-card-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.m-button .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .m-subscribe-section__container.m-button .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .kg-product-card-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .kg-product-card-button, .l-post-content .m-subscribe-section__container.loading .kg-product-card button.m-subscribe-section__container:not(.m-icon-button):not(.kg-video-card button):not(.kg-audio-card button) .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .kg-button-card a.m-subscribe-section__container.kg-btn .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-button-card .kg-product-card a.m-subscribe-section__container.kg-btn .kg-product-card-button, .l-post-content .kg-product-card .kg-button-card .m-subscribe-section__container.loading a.m-subscribe-section__container.kg-btn .kg-product-card-button, .l-post-content .kg-button-card .m-subscribe-section__container.loading .kg-product-card a.m-subscribe-section__container.kg-btn .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .kg-header-card .m-subscribe-section__container.kg-header-card-button .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-header-card .kg-product-card .m-subscribe-section__container.kg-header-card-button .kg-product-card-button, .l-post-content .kg-product-card .kg-header-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-header-card-button .kg-product-card-button, .l-post-content .kg-header-card .m-subscribe-section__container.loading .kg-product-card .m-subscribe-section__container.kg-header-card-button .kg-product-card-button, .m-subscribe-section__container.loading .l-post-content .kg-product-card .m-subscribe-section__container.kg-product-card-button .kg-product-card-button, .l-post-content .kg-product-card .m-subscribe-section__container.loading .m-subscribe-section__container.kg-product-card-button .kg-product-card-button {
   pointer-events: none;
 }
 .m-subscribe-section__container.success .m-subscribe__success {

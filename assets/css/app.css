@@ -558,6 +558,7 @@ textarea,
   --toggle-darkmode-background-color: rgba(0, 0, 0, 0.05);
   --header-menu-gradient-first-color: rgba(255, 255, 255, 0);
   --header-menu-gradient-second-color: rgba(255, 255, 255, 1);
+  --kg-card-img-invert-color: 0;
 }
 
 [data-theme=dark] {
@@ -586,6 +587,7 @@ textarea,
   --toggle-darkmode-background-color: rgba(0, 0, 0, 0.5);
   --header-menu-gradient-first-color: rgba(17, 17, 17, 0);
   --header-menu-gradient-second-color: rgba(17, 17, 17, 0.65);
+  --kg-card-img-invert-color: 1;
 }
 
 /** Helpers */
@@ -614,7 +616,7 @@ textarea,
   justify-content: center;
 }
 
-.no-appearance, .m-toggle-darkmode input, .m-alert__close, .m-input, .m-icon-button, .m-button {
+.no-appearance, .m-toggle-darkmode input, .m-input, .m-icon-button, .m-button {
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
        appearance: none !important;
@@ -1748,80 +1750,6 @@ fieldset {
   }
 }
 
-.m-alert {
-  color: #fff;
-  text-align: center;
-  letter-spacing: 1px;
-  line-height: 1.4;
-  font-size: 0.875rem;
-  visibility: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 16px 45px 14px;
-  z-index: 11;
-  transform: translateY(-100%);
-  transition: transform 0.2s ease;
-}
-@media only screen and (min-width: 48rem) {
-  .m-alert {
-    font-size: 1rem;
-    padding: 24px 75px 22px;
-  }
-}
-.m-alert.success {
-  background-color: var(--primary-subtle-color);
-}
-.m-alert.opened {
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.m-alert__close {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  outline: 0;
-  border: 0;
-  padding: 0;
-  background-color: transparent;
-  transform: translateY(-50%);
-}
-@media only screen and (min-width: 48rem) {
-  .m-alert__close {
-    right: 40px;
-    width: 25px;
-    height: 25px;
-  }
-}
-.m-alert__close span {
-  color: #fff;
-  font-size: 0.75rem;
-}
-@media only screen and (min-width: 48rem) {
-  .m-alert__close span {
-    font-size: 0.875rem;
-  }
-}
-
-.rtl .m-alert__close {
-  right: auto;
-  left: 20px;
-}
-@media only screen and (min-width: 48rem) {
-  .rtl .m-alert__close {
-    right: auto;
-    left: 40px;
-  }
-}
-
 .m-header {
   position: fixed;
   top: 0;
@@ -1890,6 +1818,14 @@ fieldset {
   height: 100%;
   padding: 10px;
   background-color: var(--logo-background);
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.m-logo img.m-logo__image-light {
+  display: var(--toggle-darkmode-button-display-moon);
+}
+.m-logo img.m-logo__image-dark {
+  display: var(--toggle-darkmode-button-display-sun);
 }
 .m-logo.in-mobile-topbar {
   height: 40px;

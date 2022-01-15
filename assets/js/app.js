@@ -53,7 +53,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   var $searchResults = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-search-results');
   var $searchNoResults = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-no-results');
   var $toggleDarkMode = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-toggle-darkmode');
-  var $closeNotification = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-notification-close');
   var $mainNav = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-main-nav');
   var $mainNavLeft = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-main-nav-left');
   var $newsletterElements = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-newsletter');
@@ -122,49 +121,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     })["catch"](function (err) {
       console.log(err);
     });
-  };
-
-  var showNotification = function showNotification(typeNotification) {
-    var $notification = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-alert[data-notification=\"".concat(typeNotification, "\"]"));
-    $notification.addClass('opened');
-    setTimeout(function () {
-      closeNotification($notification);
-    }, 5000);
-  };
-
-  var closeNotification = function closeNotification($notification) {
-    $notification.removeClass('opened');
-    var url = window.location.toString();
-
-    if (url.indexOf('?') > 0) {
-      var cleanUrl = url.substring(0, url.indexOf('?'));
-      window.history.replaceState({}, document.title, cleanUrl);
-    }
-  };
-
-  var checkForActionParameter = function checkForActionParameter() {
-    var action = Object(_helpers__WEBPACK_IMPORTED_MODULE_8__["getParameterByName"])('action');
-    var stripe = Object(_helpers__WEBPACK_IMPORTED_MODULE_8__["getParameterByName"])('stripe');
-
-    if (action === 'subscribe') {
-      showNotification('subscribe');
-    }
-
-    if (action === 'signup') {
-      window.location = "".concat(ghostHost, "/signup/?action=checkout");
-    }
-
-    if (action === 'checkout') {
-      showNotification('signup');
-    }
-
-    if (action === 'signin') {
-      showNotification('signin');
-    }
-
-    if (stripe === 'success') {
-      showNotification('checkout');
-    }
   };
 
   var toggleDesktopTopbarOverflow = function toggleDesktopTopbarOverflow(disableOverflow) {
@@ -253,9 +209,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   });
   $toggleDarkMode.on('mouseleave', function () {
     toggleDesktopTopbarOverflow(false);
-  });
-  $closeNotification.on('click', function () {
-    closeNotification(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent());
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('click', function (e) {
     if (submenuIsOpen) {
@@ -377,7 +330,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   Object(tippy_js__WEBPACK_IMPORTED_MODULE_3__["default"])('.js-tooltip');
   Object(shave__WEBPACK_IMPORTED_MODULE_5__["default"])('.js-article-card-title', 100);
   Object(shave__WEBPACK_IMPORTED_MODULE_5__["default"])('.js-article-card-title-no-image', 250);
-  checkForActionParameter();
   tryToRemoveNewsletter();
   trySearchFeature();
 });
