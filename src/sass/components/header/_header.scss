@@ -8,14 +8,15 @@
   will-change: transform;
   @include transition(transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1));
 
-  @include respond-to('medium') {
-    padding: 15px 0;
+  @include respond-to("medium") {
+    padding: 10px 0;
+    // padding-top: 10px;
   }
 
   &.mobile-menu-opened {
     height: 100%;
 
-    @include respond-to('medium') {
+    @include respond-to("medium") {
       height: auto;
     }
   }

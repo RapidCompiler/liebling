@@ -1,0 +1,36 @@
+{{!--
+This error template is used for all 404 errors, which might occur on your site.
+--}}
+
+{{!-- This block loads specific styles for the 404 page --}}
+{{#contentFor "styles"}}
+<link rel="preload" href="{{asset "css/offline.css"}}" as="style" />
+
+<link rel="stylesheet" type="text/css" href="{{asset "css/offline.css"}}" media="screen" />
+{{/contentFor}}
+
+{{!-- The tag below means: insert everything in this file
+into the {body} of the default.hbs template --}}
+{{!< default}}
+
+{{!-- Special header.hbs partial to generate the <header> tag --}}
+{{> header}}
+
+<main class="l-fullscreen">
+  <section class="l-fullscreen__content" data-aos="fade-up" data-aos-delay="300">
+    <h1 id='page-message' class="m-offline-title">Oops!</h1>
+    <p class="m-offline-subtitle">
+      {{t "You are currently" }}
+      <b id='page-status'>offline</b>
+    </p>
+    <p id='page-text' class="m-offline-text">
+      {{t "You might be having network issues!" }}
+    </p>
+    <a href="{{@site.url}}" class="m-button outlined">{{t "Refresh"}}</a>
+  </section>
+</main>
+
+{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
+{{!-- {{#contentFor "scripts"}}
+<script defer src="/pwa/status.js" ></script>
+{{/contentFor}} --}}

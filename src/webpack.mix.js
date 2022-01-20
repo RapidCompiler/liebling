@@ -37,6 +37,7 @@ mix.js('js/helpers.js', 'js/')
   .sass('sass/newsletter.scss', 'css/')
   .sass('sass/tags.scss', 'css/')
   .sass('sass/404.scss', 'css/')
+  .sass('sass/offline.scss', 'css/')
   .options({
     processCssUrls: false
   })

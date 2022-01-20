@@ -1,0 +1,45 @@
+routes:
+  # /signup/:
+  #   template: members/signup
+  #   data: page.signup
+  # /signin/:
+  #   template: members/signin
+  #   data: page.signin
+  # /membership/:
+  #   template: members/membership
+  #   data: page.membership
+  # /account/:
+  #   template: members/account
+  #   data: page.account
+  /everything-psg/:
+    template: page-category
+    data: page.everything-psg
+  /series/:
+    template: page-category
+    data: page.series
+  /interviews/:
+    template: page-category
+    data: page.interviews
+  /careers/:
+    template: page-category
+    data: page.careers
+  /team/:
+    template: page-team
+    data: page.team
+  /offline/:
+    template: offline
+  /error-301/:
+    template: error-301
+  /custom/api/:
+    permalink: /custom/api/
+    template: api
+    content_type: json
+
+collections:
+  /:
+    permalink: /{slug}/
+    template: index
+
+taxonomies:
+  tag: /category/{slug}/
+  author: /author/{slug}/

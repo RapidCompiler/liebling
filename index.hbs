@@ -31,7 +31,14 @@ into the {body} of the default.hbs template --}}
     {{#if @site.description}}
       <p class="m-hero-description bigger">{{@site.description}}</p>
     {{/if}}
-    <a href="{{@site.url}}/newsletter" class="m-button filled js-newsletter">{{t "Subscribe"}}</a>
+    {{!-- {{#if @labs.subscribers}} --}}
+      {{!-- <a href="{{@site.url}}/subscribe" class="m-button filled">{{t "Subscribe"}}</a> --}}
+    {{!-- {{/if}} --}}
+    {{!-- {{#if @labs.members}} --}}
+      {{!-- <a href="https://psgtech.us17.list-manage.com/subscribe/post?u=3724c926db363a7c051db30bb&id=77e355c53b" class="m-button filled">{{t "Subscribe"}}</a> --}}
+    {{!-- {{/if}} --}}
+    <a rel="noreferrer" rel="noopener" href="https://psgtech.us17.list-manage.com/subscribe/post?u=3724c926db363a7c051db30bb&id=77e355c53b" class="m-button filled" target="_blank">{{t "Subscribe"}}</a>
+    {{!-- <a href="{{@site.url}}/newsletter" class="m-button filled js-newsletter">{{t "Subscribe"}}</a> --}}
   </div>
   </section>
   <div class="l-content">
@@ -62,7 +69,7 @@ into the {body} of the default.hbs template --}}
                           {{/if}}
                         </div>
                         <div class="m-featured-article__meta">
-                          <a href="{{primary_author.url}}" class="m-featured-article__author js-tooltip" aria-label="{{primary_author.name}}" data-tippy-content="{{t "Posted by"}} {{primary_author.name}} {{authors autolink="false" from="2" prefix=(t "Among with") separator=" , "}}">
+                          <a href="{{primary_author.url}}" class="m-featured-article__author js-tooltip" aria-label="{{primary_author.name}}" data-tippy-content="{{t "Posted by"}} {{primary_author.name}} {{authors autolink="false" from="2" prefix=(t "Along with ") separator=" , "}}">
                             {{#if primary_author.profile_image}}
                               <div style="background-image: url({{img_url primary_author.profile_image size="xs"}});"></div>
                             {{else}}
